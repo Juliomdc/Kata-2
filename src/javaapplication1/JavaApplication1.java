@@ -21,12 +21,10 @@ public class JavaApplication1 {
     Integer[] numeros ={1,4,7,1,1,8,4,1,4,9};
     String[] nombres ={"Ana","Juan","Pedro","Juan"};
     
-    Histograma x = new Histograma(numeros);
+    Histogram <Integer> histograma = HistogramBuilder.compuHistory(numeros);
     
-    HashMap <Integer,Integer> pepe = x.getHisto();
-    
-   for (Integer key : pepe.getKeys()){
-            System.out.println(key+" : "+pepe.get(key));
+   for (Object key : histograma.KeySet()){
+            System.out.println(key+" : "+histograma.get(key));
     }
 
 
