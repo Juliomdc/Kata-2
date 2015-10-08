@@ -4,6 +4,8 @@
  */
 package javaapplication1;
 
+import java.util.HashMap;
+
 /**
  *
  * @author usuario
@@ -16,9 +18,16 @@ public class JavaApplication1 {
     public static void main(String[] args) {
         
     }
-    int[] array ={1,4,7,1,1,8,4,1,4,9};
-    Histograma x = new Histograma(array);
-
+    Integer[] numeros ={1,4,7,1,1,8,4,1,4,9};
+    String[] nombres ={"Ana","Juan","Pedro","Juan"};
+    
+    Histograma x = new Histograma(numeros);
+    
+    HashMap <Integer,Integer> pepe = x.getHisto();
+    
+   for (Integer key : pepe.getKeys()){
+            System.out.println(key+" : "+pepe.get(key));
+    }
 
 
 }
